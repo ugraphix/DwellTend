@@ -1,7 +1,5 @@
 <img src="public/brand/logo-horizontal.png" alt="DwellTend logo" width="180" />
 
-# DwellTend
-
 DwellTend is a warm, practical home-care dashboard for shared households. It starts with ready-made cleaning, maintenance, calendar, and inventory routines so a household can launch without building its system from scratch.
 
 ## What is included
