@@ -2,7 +2,7 @@
 
 DwellTend is a warm, practical home-care dashboard for shared households. It starts with ready-made cleaning, maintenance, calendar, and inventory routines so a household can launch without building its system from scratch.
 
-![DwellTend dashboard](docs/dwelltend-dashboard.png)
+![DwellTend logo](public/brand/logo-horizontal.png)
 
 ## What is included
 
