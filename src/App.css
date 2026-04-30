@@ -1,0 +1,790 @@
+.app-shell {
+  width: min(1440px, calc(100% - 32px));
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.onboarding-shell {
+  min-height: calc(100vh - 48px);
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
+}
+
+.hero-panel,
+.panel,
+.sidebar,
+.content {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-panel {
+  border-radius: 32px;
+  padding: 48px;
+  background:
+    radial-gradient(circle at top left, rgba(168, 178, 161, 0.3), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(198, 162, 139, 0.18), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.92)),
+    var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.hero-copy {
+  max-width: 42rem;
+  font-size: 1.05rem;
+}
+
+.hero-brand,
+.dashboard-heading,
+.sidebar-brand-block {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-brand {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero-logo {
+  width: min(320px, 56%);
+  height: auto;
+  filter: drop-shadow(0 20px 32px rgba(86, 76, 65, 0.08));
+}
+
+.hero-icon {
+  width: 108px;
+  height: 108px;
+  border-radius: 28px;
+  box-shadow: 0 16px 30px rgba(86, 76, 65, 0.12);
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hero-metrics article,
+.stat-card,
+.category-card,
+.task-card,
+.day-card,
+.inventory-card {
+  border-radius: 22px;
+  border: 1px solid var(--border-soft);
+  background: var(--panel);
+}
+
+.hero-metrics article {
+  padding: 20px;
+}
+
+.hero-metrics strong {
+  display: block;
+  font-size: 1.75rem;
+  font-family: var(--display);
+  color: var(--text);
+}
+
+.hero-metrics span,
+.muted,
+.panel-header p,
+.task-card p,
+.empty-copy,
+.category-card p,
+.inventory-card p {
+  color: var(--secondary);
+}
+
+.sidebar {
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+  background:
+    linear-gradient(180deg, rgba(239, 236, 231, 0.88), rgba(255, 255, 255, 0.96)),
+    var(--surface);
+}
+
+.sidebar-brand-block {
+  flex-direction: column;
+}
+
+.brand-logo {
+  width: min(100%, 250px);
+  height: auto;
+  align-self: center;
+  filter: drop-shadow(0 14px 24px rgba(86, 76, 65, 0.08));
+}
+
+.household-badge {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(168, 178, 161, 0.12), rgba(239, 236, 231, 0.95));
+  border: 1px solid var(--border-soft);
+}
+
+.summary-stack,
+.member-list,
+.task-list,
+.inventory-list,
+.shopping-list,
+.settings-group,
+.content,
+.top-strip,
+.template-preview,
+.scheduler-grid,
+.scheduler-template-list,
+.scheduler-intro {
+  display: grid;
+  gap: 12px;
+}
+
+.content {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.panel {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.top-strip {
+  background:
+    linear-gradient(135deg, rgba(191, 184, 174, 0.22), rgba(168, 178, 161, 0.18)),
+    var(--surface);
+}
+
+.eyebrow,
+.section-label,
+.task-meta span,
+.status-pill,
+.segment,
+.chip,
+.tab,
+.text-button {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--secondary);
+}
+
+.panel-header,
+.task-main,
+.task-actions,
+.category-header,
+.member-row,
+.inventory-card,
+.shopping-row,
+.toggle-row,
+.task-status-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel-header {
+  align-items: end;
+}
+
+.panel-header.compact {
+  align-items: start;
+}
+
+.tasks-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dashboard-heading {
+  align-items: center;
+}
+
+.dashboard-title-block {
+  display: grid;
+  gap: 4px;
+}
+
+.dashboard-logo {
+  width: min(260px, 100%);
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 10px 18px rgba(86, 76, 65, 0.08));
+}
+
+.dashboard-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(86, 76, 65, 0.1);
+  flex-shrink: 0;
+}
+
+.tab-list,
+.segmented-control,
+.template-chips,
+.week-grid,
+.category-grid,
+.form-grid,
+.inline-form {
+  display: grid;
+  gap: 12px;
+}
+
+.tab-list {
+  grid-template-columns: 1fr;
+}
+
+.tab,
+.segment,
+.secondary-button,
+.primary-button,
+select,
+input {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.tab,
+.segment,
+.secondary-button,
+.primary-button,
+.text-button {
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.tab,
+.segment {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.tab.active,
+.segment.active,
+.primary-button {
+  background: linear-gradient(135deg, var(--accent-taupe-deep), var(--taupe));
+  color: #fffdf9;
+  border-color: var(--accent-taupe-deep);
+}
+
+.primary-button,
+.secondary-button,
+.warning {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+}
+
+.secondary-button.warning {
+  background: linear-gradient(135deg, rgba(198, 162, 139, 0.24), rgba(191, 184, 174, 0.1));
+  border-color: rgba(198, 162, 139, 0.38);
+}
+
+.secondary-button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 236, 231, 0.92));
+  border-color: var(--border);
+}
+
+.task-card,
+.day-card,
+.inventory-card,
+.category-card {
+  padding: 18px;
+}
+
+.task-card h3,
+.day-card header,
+.inventory-card h3 {
+  margin: 0;
+}
+
+.task-card h3,
+.category-card h3,
+.panel h2,
+.panel h3,
+.sidebar h1,
+.hero-panel h1 {
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.hero-panel h1 {
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+.sidebar h1,
+.panel h2 {
+  font-size: clamp(1.55rem, 3vw, 2.3rem);
+}
+
+.panel h3,
+.category-card h3,
+.task-card h3 {
+  font-size: 1.1rem;
+}
+
+.stat-card {
+  padding: 14px 16px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(239, 236, 231, 0.92));
+  min-height: 88px;
+}
+
+.stat-card span {
+  color: var(--secondary);
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.55rem;
+  font-family: var(--display);
+}
+
+.category-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.category-card {
+  min-height: 150px;
+}
+
+.category-card:nth-child(1) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(198, 162, 139, 0.1));
+}
+
+.category-card:nth-child(2) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(168, 178, 161, 0.14));
+}
+
+.category-card:nth-child(3) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(191, 184, 174, 0.14));
+}
+
+.category-card:nth-child(4) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(198, 162, 139, 0.14));
+}
+
+.category-card:nth-child(5) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(168, 178, 161, 0.18));
+}
+
+.category-card small {
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.task-meta,
+.history-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-meta span,
+.status-pill,
+.chip,
+.history-row span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(239, 236, 231, 1), rgba(255, 255, 255, 0.9));
+  color: var(--ink-soft);
+}
+
+.status-pill.done,
+.status-pill.open {
+  background: linear-gradient(135deg, rgba(168, 178, 161, 0.28), rgba(255, 255, 255, 0.9));
+  color: #55604d;
+}
+
+.status-pill.overdue {
+  background: linear-gradient(135deg, rgba(198, 162, 139, 0.3), rgba(255, 255, 255, 0.92));
+  color: #7f624f;
+}
+
+.task-main {
+  align-items: start;
+}
+
+.task-status-group {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subtask-list {
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox-row,
+.shopping-row,
+.toggle-row {
+  align-items: center;
+}
+
+.checkbox-row,
+.shopping-row > div {
+  display: flex;
+  gap: 10px;
+}
+
+.history-row {
+  padding-top: 8px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.week-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.day-card {
+  min-height: 220px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 236, 231, 0.9)),
+    var(--panel);
+}
+
+.day-card header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.day-tasks {
+  display: grid;
+  gap: 10px;
+  padding-top: 14px;
+}
+
+.day-task {
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(239, 236, 231, 0.88), rgba(168, 178, 161, 0.22));
+  padding: 12px;
+}
+
+.day-task span,
+.inventory-card h3 {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.inventory-layout,
+.settings-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.inline-form {
+  grid-template-columns: 1.3fr 0.7fr auto;
+}
+
+.shopping-list {
+  gap: 12px;
+}
+
+.scheduler-intro {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scheduler-summary-card,
+.scheduler-category,
+.scheduler-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 236, 231, 0.84));
+}
+
+.scheduler-summary-card {
+  padding: 18px;
+}
+
+.scheduler-summary-card strong,
+.scheduler-category-header strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+}
+
+.scheduler-grid {
+  grid-template-columns: 1fr;
+}
+
+.scheduler-category {
+  padding: 18px;
+}
+
+.scheduler-category-header,
+.scheduler-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.scheduler-category-header {
+  margin-bottom: 14px;
+}
+
+.scheduler-template-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scheduler-card {
+  padding: 16px;
+}
+
+.scheduler-card.active {
+  background:
+    linear-gradient(160deg, rgba(168, 178, 161, 0.18), rgba(255, 255, 255, 0.96)),
+    var(--panel);
+  border-color: rgba(135, 146, 126, 0.28);
+}
+
+.scheduler-card h3 {
+  margin-bottom: 6px;
+}
+
+.scheduler-card-top p {
+  margin: 0;
+}
+
+.scheduler-subtask {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--ink-soft);
+  border: 1px solid rgba(217, 209, 199, 0.7);
+}
+
+.shopping-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.shopping-row:last-child {
+  border-bottom: none;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: var(--secondary);
+}
+
+.text-button {
+  border: none;
+  background: transparent;
+  color: var(--accent-warm);
+  padding: 0;
+  font-weight: 600;
+}
+
+.form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--secondary);
+}
+
+input,
+select {
+  padding: 14px 16px;
+  font: inherit;
+}
+
+input[type='checkbox'] {
+  inline-size: 18px;
+  block-size: 18px;
+  accent-color: var(--taupe);
+}
+
+.member-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.member-row strong {
+  color: var(--accent-deep);
+}
+
+.member-row:last-child {
+  border-bottom: none;
+}
+
+@media (hover: hover) {
+  .tab:hover,
+  .segment:hover,
+  .secondary-button:hover,
+  .primary-button:hover,
+  .text-button:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .app-shell,
+  .onboarding-shell,
+  .inventory-layout,
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .week-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100%, calc(100% - 20px));
+    margin: 6px auto;
+  }
+
+  .hero-panel,
+  .panel,
+  .sidebar {
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .sidebar {
+    gap: 8px;
+  }
+
+  .hero-metrics,
+  .category-grid,
+  .week-grid,
+  .form-grid,
+  .inline-form,
+  .scheduler-intro,
+  .scheduler-template-list {
+    grid-template-columns: 1fr;
+  }
+
+  .task-main,
+  .panel-header,
+  .task-actions,
+  .shopping-row,
+  .toggle-row,
+  .inventory-card,
+  .scheduler-category-header,
+  .scheduler-card-top,
+  .tasks-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-brand,
+  .dashboard-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-logo {
+    width: min(100%, 260px);
+  }
+
+  .summary-stack,
+  .member-list,
+  .task-list,
+  .inventory-list,
+  .shopping-list,
+  .settings-group,
+  .content,
+  .top-strip,
+  .template-preview,
+  .scheduler-grid,
+  .scheduler-template-list,
+  .scheduler-intro,
+  .tab-list {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: min(100%, 205px);
+  }
+
+  .household-badge {
+    padding: 10px 12px;
+  }
+
+  .muted {
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+
+  .stat-card {
+    min-height: 58px;
+    padding: 10px 14px;
+  }
+
+  .stat-card span {
+    font-size: 0.88rem;
+  }
+
+  .stat-card strong {
+    margin-top: 2px;
+    font-size: 1.05rem;
+  }
+
+  .tab,
+  .segment,
+  .secondary-button,
+  .primary-button {
+    padding: 10px 12px;
+  }
+
+  .tab {
+    font-size: 0.68rem;
+  }
+
+  .sidebar h1,
+  .panel h2 {
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+  }
+
+  .summary-stack {
+    margin-top: -2px;
+  }
+}

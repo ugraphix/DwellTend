@@ -1,0 +1,64 @@
+:root {
+  --background: #f8f7f5;
+  --surface: #efece7;
+  --panel: #ffffff;
+  --soft: #efece7;
+  --taupe: #bfb8ae;
+  --text: #2b2b2b;
+  --secondary: #8f8477;
+  --accent: #a8b2a1;
+  --accent-warm: #c6a28b;
+  --accent-deep: #87927e;
+  --accent-taupe-deep: #a59582;
+  --ink-soft: #5f5a54;
+  --border: #d9d1c7;
+  --border-soft: #e7e0d8;
+  --shadow-soft: 0 24px 60px rgba(86, 76, 65, 0.08);
+  --display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --body: 'Aptos', 'Segoe UI', sans-serif;
+
+  font-family: var(--body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(191, 184, 174, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(168, 178, 161, 0.16), transparent 28%),
+    linear-gradient(180deg, #fcfbf9 0%, var(--background) 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  appearance: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
